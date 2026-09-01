@@ -1,0 +1,26 @@
+# Create 5 file.txt with number at the end 
+ for i in {1..5}; do touch "file$i.txt"; done
+
+# Loop in /etc/hosts reading all lines untildone
+while read -r line; do echo "line: $line"; done < /etc/hosts
+
+
+# Process specific fieds separator
+# /etc/passwd format: user:x:uid:gid:info:home:shell
+while IFS=: read -r user _ uid gid _ home shell; do
+    echo "$user (UID $uid) uses $shell"
+done < /etc/passwd
+
+#Loop break stop the loop
+for i in {1..10}; do
+    [[ $i -eq 5 ]] && break
+    echo "$i"
+done
+
+#Loop continue move to the next without stopping the loop
+for i in {1..5}; do
+    [[ $i -eq 3 ]] && continue
+    echo "$i"
+done
+
+
