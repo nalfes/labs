@@ -1,0 +1,11 @@
+apiVersion: 1
+kind: PersistenVolumClaim
+metadata:
+  name: mealie-data
+  namespace: mealie
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi
