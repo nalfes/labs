@@ -3,6 +3,8 @@
     "context": "..",
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "scripts/setup"
+  "postCreateCommand": "scripts/setup",
+  "mounts": [
+    "source=${localEnv:HOME}/.kube/devpod,target=/home/vscode/.kube,type=bind"
+  ]
 }
-
