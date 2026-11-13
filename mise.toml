@@ -1,0 +1,6 @@
+[tools]
+
+kubectl = "latest"
+helm = "latest"
+shellcheck = "latest"
+k9s = "latest"
