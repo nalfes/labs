@@ -3,6 +3,9 @@
     "context": "..",
     "dockerfile": "Dockerfile"
   },
+  "containerEnv": {
+    "TZ": "Europe/Oslo"
+  },
   "postCreateCommand": "scripts/setup",
   "mounts": [
     "source=${localEnv:HOME}/.kube/devpod,target=/home/vscode/.kube,type=bind"
